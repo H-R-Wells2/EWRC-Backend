@@ -12,12 +12,12 @@ app.use(express.json())
 
 // Available Routes
 app.get('/', (req, res) => {
-    res.send('Hello H_R_Wells')
+    res.send('This is parshya')
 })
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/scrap', require('./routes/scrap'));
 
 app.listen(port, () => {
-  console.log(`HRnotebook listening on port http://localhost:${port}`)
+  console.log(`EWRC listening on port http://localhost:${port}`)
 })
