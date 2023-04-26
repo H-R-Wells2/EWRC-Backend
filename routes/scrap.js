@@ -8,11 +8,13 @@ const ScrapDetails = require('../models/ScrapDetails');
 // Route to send address and scrap data to database
 router.post('/sendScrapData', fetchuser, async (req, res) => {
   try {
-    const { address, scrapDetails, itemWeight, date, time } = req.body;
+    const { address, scrapDetails, itemWeight, date, time, name, phone } = req.body;
 
     // Create a new ScrapDetails object with the user's ID from the auth middleware
     const newScrap = new ScrapDetails({
       user: req.user.id,
+      name,
+      phone,
       address,
       itemWeight,
       date,

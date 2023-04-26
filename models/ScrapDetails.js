@@ -6,6 +6,14 @@ const ScrapSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user'
     },
+    name:{
+        type: String,
+        required: true
+    },
+    phone:{
+        type: Number,
+        required: true
+    },
     itemWeight: {
         type: String,
         required: true
